@@ -16,8 +16,7 @@ padding: 100px;
 .banner{
     position: relative;
     min-height: 100vh;
-    /* background: url(../../src/images/pt-home-01.jpg); */
-    background: url(https://municaj.gob.pe/images/turismo/Catedral.jpg);
+    background: url(../../src/images/pt-home-01.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
