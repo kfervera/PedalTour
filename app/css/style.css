@@ -16,7 +16,7 @@ padding: 100px;
 .banner{
     position: relative;
     min-height: 100vh;
-    background: url(../../src/images/pt-home-01.jpg);
+    background: url(../../src/images/pedal-tour-11-2020-0272.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -155,17 +155,17 @@ img{
 }
 .container .clip.clip1{
     clip-path: polygon(0 0, 55% 0, 20% 100%, 0 100%);
-    background: url(../../src/images/pt-home-01.jpg);
+    background: url(../../src/images/pedal-tour-11-2020-0087.jpg);
     background-size: cover;
 }
 .container .clip.clip2{
     clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
-    background: url(../../src/images/pt-nosotros-01.jpg);
+    background: url(../../src/images/pedal-tour-11-2020-0033.jpg);
     background-size: cover;
 }
 .container .clip.clip3{
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
-    background: url(../../src/images/pt-home-01.jpg);
+    background: url(../../src/images/pedal-tour-11-2020-0446.jpg);
     background-size: cover;
 }
 
@@ -175,4 +175,12 @@ img{
 
 .container .clip:hover{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media only screen and (max-width: 768){
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+    }
 }
