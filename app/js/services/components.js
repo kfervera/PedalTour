@@ -19,7 +19,7 @@ angular.module('pedalApp')
             $scope.ShowDetails = function(asd){
                 console.log(asd);
                 $("#img_detail").attr("src",asd);
-                $('.gallery').hide();
+                // $('.gallery').hide();
                 $('.box').show();
             }
 
