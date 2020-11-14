@@ -5,43 +5,50 @@
         <p>Pedalear es nuestra pasión</p>
 
         <div class="gallery">
-            <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0497.jpg">
+            <div class="img" ng-repeat="img in imgs">
+                <img src={{img.src}} ng-click="ShowDetails(img.src_alta)" data-alta="{{img.src_alta}}">
+            </div>
+            <!-- <div class="img">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0497.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0031.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0031.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0033.jpg">
-            </div>
-            
-            <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0120.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0033.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0272.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0120.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0446.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0272.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0087.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0446.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0085.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0087.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0099.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0085.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0540.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0099.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0885.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0540.jpg">
             </div>
             <div class="img">
-                <img src="src/images/pedal-tour-11-2020-0888.jpg">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0885.jpg">
             </div>
+            <div class="img">
+                <img src="src/images/thumbs/pedal-tour-11-2020-0888.jpg">
+            </div> -->
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img id="img_detail">
         </div>
     </div>
 </section>

@@ -4,7 +4,7 @@ angular.
         function config($routeProvider) {
             $routeProvider
                 .when('/', {
-                    template: '<inicio></inicio><nosotros></nosotros>'
+                    template: '<inicio></inicio>'
                 })
                 .when('/conoce', {
                     template: '<conoce></conoce>'
