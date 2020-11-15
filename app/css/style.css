@@ -9,7 +9,7 @@
 }
 
 body{
-    padding-top: 150px;;
+    padding-top: 120px;;
 }
 
 section
@@ -23,18 +23,30 @@ p
     font-size: 18px;
 }
 
+.heading{
+    width: 100%;
+    margin-bottom: 30px;
+    color: red;
+    text-transform: uppercase;
+}
+.heading h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
 .banner{
-    /* position: relative; */
+    position: relative;
     min-height: 100vh;
-    background: url(../../src/images/pedal-tour-11-2020-0272.jpg);
+    background: url(../../src/images/pedal-tour-11-2020-0497.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -100px;
+    margin-top: -150px;
 }
 .banner .textBx{
+    /* width: 100%; */
     padding-top: 15em;
 }
 .banner h2{
@@ -52,6 +64,7 @@ p
 {
     font-size: 1.5em;
     color: #fff;
+    /* -webkit-text-stroke: 1px #121421; */
     font-weight: 500;
 }
 .banner h3 span{

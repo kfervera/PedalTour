@@ -1,14 +1,4 @@
 /* Nosotros */
-.heading{
-    width: 100%;
-    margin-bottom: 30px;
-    color: red;
-    text-transform: uppercase;
-}
-.heading h2{
-    font-weight: 600;
-    font-size: 30px;
-}
 .content{
     display: flex;
     justify-content: space-between;
