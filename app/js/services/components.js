@@ -19,7 +19,6 @@ angular.module('pedalApp')
             $scope.ShowDetails = function(asd){
                 console.log(asd);
                 $("#img_detail").attr("src",asd);
-                // $('.gallery').hide();
                 $('.box').show();
             }
 
@@ -35,5 +34,8 @@ angular.module('pedalApp')
     })
     .component('reservas', {
         templateUrl: 'views/Reservas.html'
+    })
+    .component('ayuda', {
+        templateUrl: 'views/Ayuda.html'
     })
     

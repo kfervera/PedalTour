@@ -31,7 +31,7 @@ section .box .imgBx img{
     margin: auto;
     padding: 45px 0;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-gap: 2vh;
     grid-auto-flow: dense;
 }
@@ -74,3 +74,10 @@ section .box .imgBx img{
     filter: brightness(1) grayscale(0);
 }
 
+@media only screen and (max-width: 768){
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+    }
+}

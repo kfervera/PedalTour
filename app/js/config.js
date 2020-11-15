@@ -21,6 +21,9 @@ angular.
                 .when('/reservas', {
                     template: '<reservas></reservas>'
                 })
+                .when('/ayuda', {
+                    template: '<ayuda></ayuda>'
+                })
                 .otherwise('/');
         }
     ]);
