@@ -57,9 +57,9 @@ angular.module('pedalApp')
             var setVar = function(nombre, valor){
                 let result = '<strong>';
                 result += nombre;
-                result += '</strong><br></br><em>';
+                result += ': </strong><em>';
                 result += valor;
-                result += '</em>';
+                result += '</em><br></br>';
                 return result;
             };
             $scope.SendMail = function () {
@@ -67,30 +67,19 @@ angular.module('pedalApp')
                 result += setVar('Nombres', $scope.model.name)
                 result += setVar('Fecha', $scope.model.date)
                 result += setVar('Hora', $scope.model.time)
+                result += setVar('Correo', $scope.model.mail)
+                result += setVar('Celular', $scope.model.phone)
                 result += '</html>'
-                // Email.send({
-                //     Host: "smtp.mailtrap.io",
-                //     Username: "e5c1961469b310",
-                //     Password: "df0ef01d6fa9bf",
-                //     To: 'kfervera@gmail.com',
-                //     From: "sender@example.com",
-                //     Subject: "Test email",0f2bf924-f60e-4ca3-9f6d-81360306e449
-                //     Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
-                // }).then(
-                //     message => alert(message)
-                // );
 
                 Email.send({
                     SecureToken : "0f2bf924-f60e-4ca3-9f6d-81360306e449",
-                    To: 'kfervera@gmail.com',
-                    From: "info.pedaltour@gmail.com",
-                    Subject: "Test email",
+                    To: 'pedaltourcajamarca@gmail.com',
+                    From: "info@pedaltour.com",
+                    Subject: "[Pedal TOUR] Reservación",
                     Body: result
                 }).then(
-                    message => alert(message)
+                    message => alert("Gracias por confiar en pedalTOUR, para una mejor experiencia nos pondremos en contacto contigo.")
                 );
-                console.log(result);
-                console.log();
             }
         }
     })
