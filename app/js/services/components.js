@@ -34,11 +34,64 @@ angular.module('pedalApp')
     })
     .component('reservas', {
         templateUrl: 'views/Reservas.html',
-        controller: function () {
-            $(function () {
-                // alert("Kev");
-                $('th').css("color", "white");
+        controller: function ($scope) {
+            $scope.model = {};
+            jQuery.datetimepicker.setLocale('es');
+            $('.date').datetimepicker({
+                timepicker: false,
+                format: 'd/m/Y',
+                onChangeDateTime: function (dp, $input) {
+                    $scope.model.date = $input.val();
+                }
             });
+            $('.time').datetimepicker({
+                datepicker: false,
+                allowTimes: [
+                    '12:00', '13:00', '15:00'
+                ],
+                format: 'H:i',
+                onChangeDateTime: function (dp, $input) {
+                    $scope.model.time = $input.val();
+                }
+            });
+            var setVar = function(nombre, valor){
+                let result = '<strong>';
+                result += nombre;
+                result += '</strong><br></br><em>';
+                result += valor;
+                result += '</em>';
+                return result;
+            };
+            $scope.SendMail = function () {
+                let result = '<html>'
+                result += setVar('Nombres', $scope.model.name)
+                result += setVar('Fecha', $scope.model.date)
+                result += setVar('Hora', $scope.model.time)
+                result += '</html>'
+                // Email.send({
+                //     Host: "smtp.mailtrap.io",
+                //     Username: "e5c1961469b310",
+                //     Password: "df0ef01d6fa9bf",
+                //     To: 'kfervera@gmail.com',
+                //     From: "sender@example.com",
+                //     Subject: "Test email",0f2bf924-f60e-4ca3-9f6d-81360306e449
+                //     Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+                // }).then(
+                //     message => alert(message)
+                // );
+
+                Email.send({
+                    SecureToken : "0f2bf924-f60e-4ca3-9f6d-81360306e449",
+                    To: 'kfervera@gmail.com',
+                    From: "info.pedaltour@gmail.com",
+                    Subject: "Test email",
+                    Body: result
+                }).then(
+                    message => alert(message)
+                );
+                console.log(result);
+                console.log();
+            }
         }
     })
     .component('ayuda', {
