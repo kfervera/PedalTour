@@ -28,6 +28,7 @@ p
     margin-bottom: 30px;
     color: red;
     text-transform: uppercase;
+    z-index: 99999;
 }
 .heading h2{
     font-weight: 600;
@@ -35,6 +36,7 @@ p
 }
 
 .banner{
+    top: 0;
     position: relative;
     min-height: 100vh;
     background: url(../../src/images/pedal-tour-11-2020-0497.jpg);
@@ -43,7 +45,7 @@ p
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -150px;
+    /* margin-top: -150px; */
 }
 .banner .textBx{
     /* width: 100%; */

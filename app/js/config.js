@@ -24,6 +24,9 @@ angular.
                 .when('/ayuda', {
                     template: '<ayuda></ayuda>'
                 })
-                .otherwise('/');
+                .when('/error',{
+                    template: '<error></error>'
+                })
+                .otherwise('/error');
         }
     ]);
