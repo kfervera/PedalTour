@@ -9,16 +9,16 @@
 }
 
 body{
-    padding-top: 120px;;
+    padding-top: 100px;;
 }
 
 section
 {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
-p
+/* p
 {
     font-size: 18px;
 }
@@ -33,51 +33,7 @@ p
 .heading h2{
     font-weight: 600;
     font-size: 30px;
-}
-
-.banner{
-    top: 0;
-    position: relative;
-    min-height: 100vh;
-    background: url(../../src/images/pedal-tour-11-2020-0497.jpg);
-    background-size: cover;
-    background-position: right;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* margin-top: -150px; */
-}
-.banner .textBx{
-    /* width: 100%; */
-    padding-top: 15em;
-}
-.banner h2{
-    font-size: 2em;
-    color: #fff;
-    font-weight: 400;
-    line-height: 1.5em;
-    padding-bottom: 1em;
-}
-.banner h2 span{
-    font-size: 3em;
-    font-weight: 700;
-}
-.banner h3
-{
-    font-size: 1.5em;
-    color: #fff;
-    /* -webkit-text-stroke: 1px #121421; */
-    font-weight: 500;
-}
-.banner h3 span{
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.banner h3 svg{
-    font-size: 0.5em;
-    margin-bottom: 3px;
-}
+} */
 
 header{
     position: fixed;
@@ -128,4 +84,38 @@ header ul li a{
     margin-bottom: 30px;
     color: red;
     text-transform: uppercase;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    background: #121421;
+    color: #fff;
+    width: 100%;
+    padding: 10px 90px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+footer ul{
+    position: relative;
+    display: flex;
+}
+footer ul li{
+    margin-right: 10px;
+    position: relative;
+    list-style: none;
+    font-size: 2rem !important;
+}
+.social-media svg{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+.social-media a{
+    cursor: pointer;
 }

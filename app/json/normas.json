@@ -1,0 +1,40 @@
+{
+    "normas":[
+        {
+            "number":"1",
+            "title":"Pedalea",
+            "img":"",
+            "Text":"El vagón a pedales no tiene ningún motor. Si te subes a un asiento con pedalesy y no los usas, perjudicarás al grupo entero. Si la mayor parte de la gente no pedalea. el vehiculo no se moverá. Atento a las instrucciones del conductor sobre la intensidad de pedaleo."
+        },{
+            "number":"2",
+            "title":"No te levantes del asiento mientras el vehiculo está en marcha",
+            "img":"",
+            "Text":"Si quieres experimentar en otro asiento, avisa al guía. Aunque el vehiculo circule muy lentamente, debes ayudarnos a mantener el orden de los pasajeros."
+        },{
+            "number":"3",
+            "title":"Sé respetuoso con los usuarios de la vía y los empleados",
+            "img":"",
+            "Text":"Pedal Tour es una actividad de ocio que da prioridad a los peatones, ciclistas o vehículos. No grites, no hagas gestos obcenos ni uses vocavulario soez para dirigirte a ellos. El conductor y el guía son empleados a tu servicio, sé educado y respeta su trabajo."
+        },{
+            "number":"4",
+            "title":"No tires nada al suelo",
+            "img":"",
+            "Text":"Pedal Tour tiene disponible papeeras a bordo. Si quieres, solicita ayuda al guía. Nuestro vehiculo está equipado con papeleras. Comparte nuestra preocupación por ser una actividad respetuosa con el medio ambiente."
+        },{
+            "number":"5",
+            "title":"No hables con el conductor",
+            "img":"",
+            "Text":"El conductor dirige el vehículo gracias al movimiento de los pedales, bajo ningún concepto debe molestar al conductor durante la marcha, y así evitar accidentes de tránsito."
+        },{
+            "number":"6",
+            "title":"Usa cinturón de seguridad",
+            "img":"",
+            "Text":"Colócate el cinturón de seguridad en cuanto te lo indique tu guía y no te la desabroches hasta llegar a tu destino, si deseas algún ajuste, no dudes en pedir ayuda."
+        },{
+            "number":"7",
+            "title":"Prohibido subir en estado etílico",
+            "img":"",
+            "Text":"Si ingeriste bebidas alcohólicas antes de subir al vagón, tendremos que invitarte a retirarte sin reclamo a devolución. Recuerda que lo hacemos por tu seguridad."
+        }
+    ]
+}

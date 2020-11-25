@@ -1,0 +1,41 @@
+.banner{
+    position: relative;
+    min-height: 100vh;
+    background: url(../../src/images/pedal-tour-11-2020-0497.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner .textBx{
+    padding-top: 15em;
+}
+.banner h2{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+}
+.banner h2 span{
+    font-size: 3em;
+    font-weight: 700;
+}
+.banner h3
+{
+    font-size: 1.5em;
+    color: #fff;
+    /* -webkit-text-stroke: 1px #121421; */
+    font-weight: 500;
+}
+.banner h3 span{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.banner h3 svg{
+    font-size: 0.5em;
+    margin-bottom: 3px;
+}
+

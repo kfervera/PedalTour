@@ -1,6 +1,11 @@
 angular.module('pedalApp')
     .component('inicio', {
-        templateUrl: 'views/Inicio.html'
+        templateUrl: 'views/Inicio.html',
+        controller:function($scope){
+            $scope.SendMail = function(){
+                window.open('mailto:pedaltourcajamarca@gmail.com');
+            }
+        }
     })
     .component('conoce', {
         templateUrl: 'views/ConoceCajamarca.html'
@@ -84,15 +89,22 @@ angular.module('pedalApp')
         }
     })
     .component('ayuda', {
-        templateUrl: 'views/Ayuda.html'
+        templateUrl: 'views/Ayuda.html',
+        controller: function($scope, $http){
+            $http.get('app/json/normas.json').then(function (response) {
+                $scope.normas = response.data.normas;
+            });
+        }
     })
     .component('error', {
         templateUrl: 'views/Error.html',
         controller: function ($scope) {
-            $('#pedalHeader').hide();
-            $scope.BackIndex = function () {
-                $('#pedalHeader').show();
-            }
+            // $('#pedalHeader').hide();
+            // $('#pedalFooter').hide();
+            // $scope.BackIndex = function () {
+            //     $('#pedalHeader').show();
+            //     $('#pedalHeader').show();
+            // }
 
             function stars() {
                 let count = 500;

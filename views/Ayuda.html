@@ -4,15 +4,15 @@
     <div class="heading">
         <h2>Ayuda</h2>
     </div>
+
+</section>
+<section>
     <div class="content">
         <div class="contentBx">
             <h3>Preguntas Frecuentes</h3>
             </br>
         </div>
-
     </div>
-</section>
-<section>
     <div class="faq-container">
         <!-- <p>¿Cómo protege Google mi privacidad y mantiene mi información segura?</p>
         <span>Sabemos que para usted la seguridad y la privacidad son importantes —para nosotros también lo son—. La seguridad de su información y la garantía de que podrá acceder a ella cuando lo necesite son nuestras prioridades.</span> -->
@@ -47,5 +47,27 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section>
+    <div class="content">
+        <div class="contentBx">
+            <h3>Normas del vagón a pedales</h3>
+            </br>
+        </div>
+        
+        <div class="card-container">
+            <div class="card" ng-repeat="norma in normas">
+                <div class="imgBx" data-text={{norma.number}}>
+                    <img src="../src/images/normas/icono1.png">
+                </div>
+                <div class="card-content">
+                    <h3>{{norma.title}}</h3>
+                    <p>{{norma.Text}}</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>

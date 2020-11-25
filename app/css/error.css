@@ -6,6 +6,7 @@
     background-attachment: fixed;
     overflow: hidden;
     top: 0;
+    z-index: 9999;
 }
 .scene i{
     position: absolute;
@@ -63,6 +64,7 @@
     position: relative;
     top: 10em;
     left: 50em;
+    z-index: 9999;
 }
 .text h2{
     position: relative;
