@@ -20,4 +20,7 @@ $(function () {
         $(".t-close").hide();
         $(".menu").removeClass("active");
     });
+    $(".menu-item").on("click", function(){
+        $(".menu").removeClass("active");
+    });
 });

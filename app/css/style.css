@@ -131,6 +131,10 @@ footer ul li{
     .menu.active{
         left: 0;
     }
+    header ul li a{
+        font-size: 25px;
+        margin: 15px;
+    }
     header.sticky ul li a{
         color: #121421;
         font-size: 25px;
