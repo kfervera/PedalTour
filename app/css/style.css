@@ -156,6 +156,9 @@ footer ul li{
 }
 
 @media(max-width: 492px){
+    section{
+        padding: 50px 25px;
+    }
     footer ul li{
         margin-right: 0;
         font-size: 1.25rem;

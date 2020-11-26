@@ -82,8 +82,27 @@
 
 /* RESPONSIVE */
 @media(max-width: 991px){
+    .moon{
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        width: 75px;
+        height: 75px;
+    }
+    /* .moon:after{
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(#111425, #3751e0);
+        background-attachment: fixed;
+    } */
     .text{
         top: calc(100% - 25em);
+        left: 20px;
     }
     .text h2{
         font-size: 4em;
