@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="app/css/gallery.css">
-<section>
-    <div class="main">
-        <h2>MASONRY GALERIA</h2>
-        <p>Pedalear es nuestra pasión</p>
 
+<section>
+    <div class="heading">
+        <h2>GALERIA</h2>
+        <p>Pedalear es nuestra pasión</p>
+    </div>
+    <div class="main">
         <div class="gallery">
             <div class="img" ng-repeat="img in imgs">
                 <img src={{img.src}} ng-click="ShowDetails(img.src_alta)" data-alta="{{img.src_alta}}">

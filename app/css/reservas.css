@@ -21,7 +21,7 @@ section .container{
     min-width: calc(100% - 120px);
     min-height: 600px;
     display: flex;
-    z-index: 1000;
+    z-index: 998;
 }
 section .container .contactform{
     position: absolute;

@@ -9,7 +9,6 @@ $(function () {
         }
     });
     $(".t-close").hide();
-    // $(".menu").hide();
     $(".t-open").on("click", function(){
         $(".t-open").hide();
         $(".t-close").show();
@@ -21,6 +20,8 @@ $(function () {
         $(".menu").removeClass("active");
     });
     $(".menu-item").on("click", function(){
+        $(".t-open").show();
+        $(".t-close").hide();
         $(".menu").removeClass("active");
     });
 });

@@ -66,7 +66,7 @@ header ul li a{
 
 .heading{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: red;
     text-transform: uppercase;
 }
@@ -125,7 +125,7 @@ footer ul li{
         height: 100vh;
         background: #fff;
         transition: 0.5s;
-        z-index: 999;
+        z-index: 99999;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
     }
     .menu.active{
@@ -160,8 +160,14 @@ footer ul li{
 }
 
 @media(max-width: 492px){
+    header,
+    header.sticky{
+        padding: 5px 20px;
+        z-index: 1000;
+        
+    }
     section{
-        padding: 50px 25px;
+        padding: 0 20px;
     }
     footer ul li{
         margin-right: 0;

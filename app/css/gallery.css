@@ -80,4 +80,9 @@ section .box .imgBx img{
         grid-template-columns: auto auto auto;
 
     }
+
+    .main .gallery{
+        width: 100%;
+        padding: 0;
+    }
 }
