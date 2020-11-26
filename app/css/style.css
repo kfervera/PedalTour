@@ -92,7 +92,7 @@ footer ul li{
     margin-right: 10px;
     position: relative;
     list-style: none;
-    font-size: 2rem !important;
+    font-size: 2rem;
     display: inline;
 }
 .social-media svg{
@@ -152,5 +152,15 @@ footer ul li{
     
     section{
         padding: 100px 50px;
+    }
+}
+
+@media(max-width: 492px){
+    footer ul li{
+        margin-right: 0;
+        font-size: 1.25rem;
+    }
+    .text-gray{
+        font-size: .5em;
     }
 }
