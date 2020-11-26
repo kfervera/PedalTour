@@ -18,23 +18,6 @@ section
     padding-right: 200px;
 }
 
-/* p
-{
-    font-size: 18px;
-}
-
-.heading{
-    width: 100%;
-    margin-bottom: 30px;
-    color: red;
-    text-transform: uppercase;
-    z-index: 99999;
-}
-.heading h2{
-    font-weight: 600;
-    font-size: 30px;
-} */
-
 header{
     position: fixed;
     top: 0;
@@ -91,13 +74,13 @@ footer{
     width: 100%;
     background: #121421;
     color: #fff;
-    width: 100%;
     padding: 10px 90px;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 15px;
+    text-align: center;
+}
+.media-items{
+    display: inline-flex;
 }
 footer ul{
     position: relative;
@@ -108,6 +91,7 @@ footer ul li{
     position: relative;
     list-style: none;
     font-size: 2rem !important;
+    display: inline;
 }
 .social-media svg{
     position: relative;
@@ -118,4 +102,48 @@ footer ul li{
 }
 .social-media a{
     cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width: 991px){
+    header,
+    header.sticky{
+        padding: 20px 50px;
+        z-index: 1000;
+        
+    }
+    .menu{
+        position: fixed;
+        top: 100px;
+        left: 0;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    header.sticky ul li a{
+        color: #121421;
+        font-size: 25px;
+        margin: 15px;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        color: #121421;
+        cursor: pointer;
+    }
+    .toggle svg{
+        font-size: 1.75em;
+    }
+    header.sticky svg{
+        color: #fff;
+    }
+    section{
+        padding: 100px 50px;
+    }
 }

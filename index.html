@@ -27,8 +27,17 @@
 
     <header id="pedalHeader">
         <a href="#!/"><img class="logo" src="src/icons/logo-03.png"></a>
-        <div class="toggle"></div>
-        <ul>
+        
+        <div class="toggle">
+            <div class="t-open">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="t-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <ul class="menu">
             <li><a href="#!/nosotros">NOSOTROS</a></li>
             <!-- <li><a href="#!/conoce">CONOCE CAJAMARCA</a></li> -->
             <li><a href="#!/galeria">GALERÍA</a></li>
@@ -38,24 +47,27 @@
             <li><a href="#!/ayuda">AYUDA</a></li>
         </ul>
     </header>
-    
+
     <div ng-view></div>
 
     <footer id="pedalFooter">
-        <div class="rights">
-            <p class="text-gray">
-                Pedal TOUR Copyright ©2020 All rights reserved | made by Kevin Fernández
-            </p>
-            <div></div>
+        <div class="media-items">
             <ul class="social-media">
-                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedaltourcajamarca@gmail.com&su=[PedalInfo] Consulta a pedal Tour&body=Estimados pedales:"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://www.facebook.com/Pedal-Tour-100713094680526"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=pedaltourcajamarca@gmail.com&su=[PedalInfo] Consulta a pedal Tour&body=Estimados pedales:"><i
+                            class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.facebook.com/Pedal-Tour-100713094680526"><i
+                            class="fab fa-facebook-square"></i></a></li>
                 <li><a href="https://www.instagram.com/pedaltourcajamarca/"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://twitter.com/pedaltourcajamarca"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="https://www.youtube.com/watch?v=dblklpAz1Is"><i class="fab fa-youtube"></i></a></li>
                 <li><a href="#!/tiktok"><i class="fab fa-tiktok"></i></a></li>
             </ul>
         </div>
+
+        <p class="text-gray">
+            Pedal TOUR Copyright ©2020 All rights reserved | made by Kevin Fernández
+        </p>
     </footer>
 
     <!-- scripts AngularJs -->

@@ -64,6 +64,7 @@
     position: relative;
     top: 10em;
     left: 50em;
+    align-items: center;
     z-index: 9999;
 }
 .text h2{

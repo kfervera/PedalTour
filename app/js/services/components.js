@@ -98,14 +98,7 @@ angular.module('pedalApp')
     })
     .component('error', {
         templateUrl: 'views/Error.html',
-        controller: function ($scope) {
-            // $('#pedalHeader').hide();
-            // $('#pedalFooter').hide();
-            // $scope.BackIndex = function () {
-            //     $('#pedalHeader').show();
-            //     $('#pedalHeader').show();
-            // }
-
+        controller: function () {
             function stars() {
                 let count = 500;
                 let scene = document.querySelector('.scene');
