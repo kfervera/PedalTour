@@ -26,7 +26,6 @@
 {
     font-size: 1.5em;
     color: #fff;
-    /* -webkit-text-stroke: 1px #121421; */
     font-weight: 500;
 }
 .banner h3 span{
@@ -39,3 +38,15 @@
     margin-bottom: 3px;
 }
 
+/* RESPONSIVE */
+@media(max-width: 991px){
+    .banner{
+        padding: 150px 50px 100px;
+    }
+    .banner h2{
+        font-size: 1.5em;
+    }
+    .banner h3{
+        font-size: 1em;
+    }
+}

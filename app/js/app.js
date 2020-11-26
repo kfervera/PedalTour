@@ -9,15 +9,15 @@ $(function () {
         }
     });
     $(".t-close").hide();
-    $(".menu").hide();
+    // $(".menu").hide();
     $(".t-open").on("click", function(){
         $(".t-open").hide();
         $(".t-close").show();
-        $(".menu").show();
+        $(".menu").addClass("active");
     });
     $(".t-close").on("click", function(){
         $(".t-open").show();
         $(".t-close").hide();
-        $(".menu").hide();
+        $(".menu").removeClass("active");
     });
 });

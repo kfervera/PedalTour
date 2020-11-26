@@ -40,7 +40,9 @@ header.sticky{
 header.sticky ul li a{
     color: #fff;
 }
-
+.toggle svg{
+    color: rgba(0, 0, 0, 0);
+}
 header .logo{
     width: 7em;
     margin-top: -15px;
@@ -115,7 +117,7 @@ footer ul li{
     .menu{
         position: fixed;
         top: 100px;
-        left: 0;
+        left: -100%;
         display: block;
         padding: 100px 50px;
         text-align: center;
@@ -126,10 +128,16 @@ footer ul li{
         z-index: 999;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
     }
+    .menu.active{
+        left: 0;
+    }
     header.sticky ul li a{
         color: #121421;
         font-size: 25px;
         margin: 15px;
+    }
+    header.sticky svg{
+        color: #fff;
     }
     .toggle{
         width: 40px;
@@ -138,11 +146,10 @@ footer ul li{
         cursor: pointer;
     }
     .toggle svg{
+        color: #121421;
         font-size: 1.75em;
     }
-    header.sticky svg{
-        color: #fff;
-    }
+    
     section{
         padding: 100px 50px;
     }
