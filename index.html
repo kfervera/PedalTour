@@ -27,8 +27,8 @@
 <body>
 
     <header id="pedalHeader">
-        <a href="/"><img class="logo" src="src/icons/logo-03.png"></a>
-        
+        <a class="menu-item" href="/"><img class="logo" src="src/icons/logo-03.png"></a>
+
         <div class="toggle">
             <div class="t-open">
                 <i class="fas fa-bars"></i>
@@ -37,16 +37,37 @@
                 <i class="fas fa-times"></i>
             </div>
         </div>
-        
+
         <ul class="menu">
-            <li><a class="menu-item" href="/nosotros">NOSOTROS</a></li>
-            <!-- <li><a class="menu-item" href="#!/conoce">CONOCE CAJAMARCA</a></li> -->
-            <li><a class="menu-item" href="/galeria">GALERÍA</a></li>
-            <!-- <li><a class="menu-item" href="#!/re">REGISTROS</a></li> -->
-            <li><a class="menu-item" href="/reservas">RESERVAS</a></li>
-            <li><a class="menu-item" href="/contacto">CONTÁCTANOS</a></li>
-            <li><a class="menu-item" href="/ayuda">AYUDA</a></li>
+            <li class="lang-es"><a class="menu-item" href="/nosotros">NOSOTROS</a></li>
+            <!-- <li class="lang-es"><a class="menu-item" href="#!/conoce">CONOCE CAJAMARCA</a></li> -->
+            <li class="lang-es"><a class="menu-item" href="/galeria">GALERÍA</a></li>
+            <!-- <li class="lang-es"><a class="menu-item" href="#!/re">REGISTROS</a></li> -->
+            <li class="lang-es"><a class="menu-item" href="/reservas">RESERVAS</a></li>
+            <li class="lang-es"><a class="menu-item" href="/contacto">CONTÁCTANOS</a></li>
+            <li class="lang-es"><a class="menu-item" href="/ayuda">AYUDA</a></li>
+
+            <li class="lang-en"><a class="menu-item" href="/nosotros">ABOUT US</a></li>
+            <!-- <li class="lang-es"><a class="menu-item" href="#!/conoce">CONOCE CAJAMARCA</a></li> -->
+            <li class="lang-en"><a class="menu-item" href="/galeria">GALLERY</a></li>
+            <!-- <li class="lang-es"><a class="menu-item" href="#!/re">REGISTROS</a></li> -->
+            <li class="lang-en"><a class="menu-item" href="/reservas">RESERVATIONS</a></li>
+            <li class="lang-en"><a class="menu-item" href="/contacto">CONTACT</a></li>
+            <li class="lang-en"><a class="menu-item" href="/ayuda">HELP</a></li>
         </ul>
+
+        <div class="language" style="background-color: withe;">
+            <div id="btn-es" class="lang lang-en">
+                <img src="src/icons/flag-pe.png" alt="" style="height: 25px;">
+                <!-- <a  style="margin-bottom: 5px;">Español</a> -->
+            </div>
+            <div id="btn-en" class="lang lang-es">
+                <img src="src/icons/flag-eu.png" alt="" style="height: 25px;">
+                <!-- <a   >Inglés</a> -->
+            </div>
+            
+        </div>
+
     </header>
 
     <div ng-view></div>
@@ -72,10 +93,10 @@
     </footer>
 
     <!-- scripts AngularJs -->
+    <script src="app/js/app.js"></script>
     <script src="app/js/module.js"></script>
     <script src="app/js/config.js"></script>
     <script src="app/js/services/components.js"></script>
-    <script src="app/js/app.js"></script>
 </body>
 
 </html>

@@ -8,18 +8,35 @@ $(function () {
             $(".logo").attr("src", "src/icons/logo-03.png");
         }
     });
+
+    $('body').find("#btn-en").on("click", function () {
+        $(".lang-en").show();
+        $(".lang-es").hide();
+        $('.menu-item').each(function () {
+            this.href = this.href + "#en";
+        });
+    });
+
+    $('body').find("#btn-es").on("click", function () {
+        $(".lang-es").show();
+        $(".lang-en").hide();
+        $('.menu-item').each(function () {
+            this.href = this.href.replace("#en", "");
+        });
+    });
+
     $(".t-close").hide();
-    $(".t-open").on("click", function(){
+    $(".t-open").on("click", function () {
         $(".t-open").hide();
         $(".t-close").show();
         $(".menu").addClass("active");
     });
-    $(".t-close").on("click", function(){
+    $(".t-close").on("click", function () {
         $(".t-open").show();
         $(".t-close").hide();
         $(".menu").removeClass("active");
     });
-    $(".menu-item").on("click", function(){
+    $(".menu-item").on("click", function () {
         $(".t-open").show();
         $(".t-close").hide();
         $(".menu").removeClass("active");

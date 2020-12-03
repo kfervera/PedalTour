@@ -1,2 +1,35 @@
-<h1>Error</h1>
-<h3>Page not found</h3>
+<link rel="stylesheet" type="text/css" href="app/css/error.css">
+
+<div class="scene">
+    <div class="moon"></div>
+    <img src="src/icons/forest.png" class="forest">
+    <div class="text">
+        <h2>Error 404</h2>
+        <p>Opps, página no encontrada</p>
+        <a href="/">Regresar al inicio</a>
+    </div>
+</div>
+
+<script>
+    function stars() {
+        let count = 500;
+        let scene = document.querySelector('.scene');
+        let i = 0;
+        while (i < count) {
+            let star = document.createElement("i");
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            let duration = Math.random() * 10;
+            let size = Math.floor((Math.random() * 5) + 1);
+            star.style.left = x + 'px';
+            star.style.top = y + 'px';
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.animationDuration = 5 + duration + 's';
+            star.style.animationDelay = duration + 's';
+            scene.appendChild(star);
+            i++;
+        }
+    }
+    stars();
+</script>

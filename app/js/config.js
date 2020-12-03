@@ -1,8 +1,9 @@
 angular.
     module('pedalApp').
-    config(['$locationProvider','$routeProvider',
+    config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
-            $locationProvider.html5Mode({enabled:true})
+            $locationProvider.html5Mode(true);
+            $locationProvider.hashPrefix('!');
             $routeProvider
                 .when('/', {
                     template: '<inicio></inicio>'
@@ -25,7 +26,7 @@ angular.
                 .when('/ayuda', {
                     template: '<ayuda></ayuda>'
                 })
-                .when('/error',{
+                .when('/error', {
                     template: '<error></error>'
                 })
                 .otherwise('/error');

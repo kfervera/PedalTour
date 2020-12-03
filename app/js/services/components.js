@@ -1,8 +1,17 @@
 angular.module('pedalApp')
     .component('inicio', {
         templateUrl: 'views/Inicio.html',
-        controller:function($scope){
-            $scope.SendMail = function(){
+        controller: function ($scope) {
+
+            if (!window.location.hash || window.location.hash === '#es') {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+
+            $scope.SendMail = function () {
                 window.open('mailto:pedaltourcajamarca@gmail.com');
             }
         }
@@ -35,7 +44,16 @@ angular.module('pedalApp')
         }
     })
     .component('nosotros', {
-        templateUrl: 'views/Nosotros.html'
+        templateUrl: 'views/Nosotros.html',
+        controller: function () {
+            if (!window.location.hash || window.location.hash === '#es') {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+        }
     })
     .component('reservas', {
         templateUrl: 'views/Reservas.html',
@@ -59,7 +77,7 @@ angular.module('pedalApp')
                     $scope.model.time = $input.val();
                 }
             });
-            var setVar = function(nombre, valor){
+            var setVar = function (nombre, valor) {
                 let result = '<strong>';
                 result += nombre;
                 result += ': </strong><em>';
@@ -77,7 +95,7 @@ angular.module('pedalApp')
                 result += '</html>'
 
                 Email.send({
-                    SecureToken : "0f2bf924-f60e-4ca3-9f6d-81360306e449",
+                    SecureToken: "0f2bf924-f60e-4ca3-9f6d-81360306e449",
                     To: 'pedaltourcajamarca@gmail.com',
                     From: "info@pedaltour.com",
                     Subject: "[Pedal TOUR] Reservación",
@@ -90,7 +108,7 @@ angular.module('pedalApp')
     })
     .component('ayuda', {
         templateUrl: 'views/Ayuda.html',
-        controller: function($scope, $http){
+        controller: function ($scope, $http) {
             $http.get('app/json/normas.json').then(function (response) {
                 $scope.normas = response.data.normas;
             });
