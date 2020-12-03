@@ -2,8 +2,8 @@ angular.module('pedalApp')
     .component('inicio', {
         templateUrl: 'views/Inicio.html',
         controller: function ($scope) {
-
-            if (!window.location.hash || window.location.hash === '#es') {
+            console.log(window.location.hash);
+            if (!window.location.hash || window.location.hash === '#!/#es' || window.location.hash === '#!/') {
                 $(".lang-es").show();
                 $(".lang-en").hide();
             } else {
@@ -46,7 +46,7 @@ angular.module('pedalApp')
     .component('nosotros', {
         templateUrl: 'views/Nosotros.html',
         controller: function () {
-            if (!window.location.hash || window.location.hash === '#es') {
+            if (!window.location.hash || window.location.hash === '#!/#es' || window.location.hash === '#!/') {
                 $(".lang-es").show();
                 $(".lang-en").hide();
             } else {

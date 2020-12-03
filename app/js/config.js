@@ -1,9 +1,10 @@
 angular.
     module('pedalApp').
-    config(['$locationProvider', '$routeProvider',
-        function config($locationProvider, $routeProvider) {
-            $locationProvider.html5Mode(true);
-            $locationProvider.hashPrefix('!');
+    config(['$qProvider', function ($qProvider) {
+        $qProvider.errorOnUnhandledRejections(false);
+    }]).
+    config(['$routeProvider', '$locationProvider',
+        function config($routeProvider, $locationProvider) {
             $routeProvider
                 .when('/', {
                     template: '<inicio></inicio>'
@@ -30,5 +31,10 @@ angular.
                     template: '<error></error>'
                 })
                 .otherwise('/error');
+            //     $locationProvider.html5Mode({
+            //         enabled: true,
+            //         requireBase: false
+            //       });
+            // $locationProvider.hashPrefix('');
         }
     ]);
