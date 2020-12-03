@@ -2,7 +2,7 @@ angular.module('pedalApp')
     .component('inicio', {
         templateUrl: 'views/Inicio.html',
         controller: function ($scope) {
-            console.log(window.location.hash);
+            
             if (!window.location.hash || !window.location.hash.includes("#en")) {
                 $(".lang-es").show();
                 $(".lang-en").hide();
@@ -17,14 +17,40 @@ angular.module('pedalApp')
         }
     })
     .component('conoce', {
-        templateUrl: 'views/ConoceCajamarca.html'
+        templateUrl: 'views/ConoceCajamarca.html',
+        controller: function () {
+            if (!window.location.hash || !window.location.hash.includes("#en")) {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+        }
     })
     .component('contacto', {
-        templateUrl: 'views/Contacto.html'
+        templateUrl: 'views/Contacto.html',
+        controller: function () {
+            if (!window.location.hash || !window.location.hash.includes("#en")) {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+        }
     })
     .component('galeria', {
         templateUrl: 'views/Galeria.html',
         controller: function ($scope, $http) {
+            if (!window.location.hash || !window.location.hash.includes("#en")) {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+
             $http.get('app/json/gallery-list.json').then(function (response) {
                 $scope.imgs = response.data.imgs;
             });
@@ -59,6 +85,15 @@ angular.module('pedalApp')
         templateUrl: 'views/Reservas.html',
         controller: function ($scope) {
             $scope.model = {};
+
+            if (!window.location.hash || !window.location.hash.includes("#en")) {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+
             jQuery.datetimepicker.setLocale('es');
             $('.date').datetimepicker({
                 timepicker: false,
@@ -109,6 +144,14 @@ angular.module('pedalApp')
     .component('ayuda', {
         templateUrl: 'views/Ayuda.html',
         controller: function ($scope, $http) {
+            if (!window.location.hash || !window.location.hash.includes("#en")) {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+            } else {
+                $(".lang-en").show();
+                $(".lang-es").hide();
+            }
+            
             $http.get('app/json/normas.json').then(function (response) {
                 $scope.normas = response.data.normas;
             });

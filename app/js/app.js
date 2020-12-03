@@ -15,6 +15,7 @@ $(function () {
         $('.menu-item').each(function () {
             this.href = this.href + "#en";
         });
+        location.href = location.href + "#en";
     });
 
     $('body').find("#btn-es").on("click", function () {
@@ -23,6 +24,7 @@ $(function () {
         $('.menu-item').each(function () {
             this.href = this.href.replace("#en", "");
         });
+        location.href = location.href.replace("#en", "");
     });
 
     $(".t-close").hide();
