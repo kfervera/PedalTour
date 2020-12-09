@@ -18,6 +18,20 @@ section
     padding-right: 200px;
 }
 
+.heading{
+    text-align: center;
+}
+h1{
+    color: red;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+h2{
+    color: red;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 /* HEADER */
 header{
     position: fixed;
