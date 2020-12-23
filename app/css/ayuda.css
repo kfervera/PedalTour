@@ -1,6 +1,6 @@
 .faq-container{
     width: 100%;
-    max-width: 80rem;
+    max-width: 90rem;
     margin: 0;
     padding: 0 1.5rem;
     color: white
@@ -17,7 +17,6 @@
 .accordion-link{
     color: rgba(255, 255, 255, .8);
     text-decoration: none;
-    /* background-color: #121421; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -54,7 +53,10 @@
 
 .answer p{
     color: rgba(255, 255, 255, .6);
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
 }
 
 .accordion-item:target .answer{
