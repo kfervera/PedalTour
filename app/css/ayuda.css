@@ -58,6 +58,12 @@
     padding-top: .75rem;
     padding-bottom: .75rem;
 }
+.answer ul{
+    color: rgba(255, 255, 255, .6);
+    padding-left: 4rem;
+    padding-right: 2rem;
+    padding-bottom: .75rem;
+}
 
 .accordion-item:target .answer{
     max-height: 20rem;
