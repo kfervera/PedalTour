@@ -1,11 +1,54 @@
 <link rel="stylesheet" href="app/css/gallery.css">
 
-<div class="heading">
-    <h2 class="lang-es">GALERIA</h2>
-    <h2 class="lang-en">GALLERY</h2>
+<div class="text-center pt-3">
+    <h1 class="lang-es">Galería</h1>
+    <h1 class="lang-en">Gallery</h1>
 </div>
 
 <section>
+    <div class="row">
+        <h2 class="lang-es">Recorrido del Vagón</h2>
+        <h2 class="lang-en">Wagon Route</h2>
+        <div class="row mb-5">
+            <video class="video" src="/src/videos/recorrido.webm" controls></video>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <h2 class="lang-es">Nuestras mejores imágenes</h2>
+        <h2 class="lang-en">Our best images</h2>
+        <p class="lang-es">Pedalear es nuestra pasión</p>
+        <p class="lang-en">Pedaling is our passion</p>
+        <div class="row mb-5">
+            <div class="main">
+                <div class="gallery">
+                    <div class="img" ng-repeat="img in imgs">
+                        <img src={{img.src}} ng-click="ShowDetails(img.src_alta)" data-alta="{{img.src_alta}}">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBx">
+                        <img id="img_detail" ng-click="HideDetails()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
     <p class="lang-es">Pedalear es nuestra pasión</p>
     <p class="lang-en">Pedaling is our passion</p>
     <div class="main">
@@ -13,42 +56,6 @@
             <div class="img" ng-repeat="img in imgs">
                 <img src={{img.src}} ng-click="ShowDetails(img.src_alta)" data-alta="{{img.src_alta}}">
             </div>
-            <!-- <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0497.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0031.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0033.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0120.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0272.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0446.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0087.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0085.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0099.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0540.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0885.jpg">
-            </div>
-            <div class="img">
-                <img src="src/images/thumbs/pedal-tour-11-2020-0888.jpg">
-            </div> -->
         </div>
     </div>
     <div class="box">
@@ -56,4 +63,4 @@
             <img id="img_detail" ng-click="HideDetails()">
         </div>
     </div>
-</section>
+</section> -->

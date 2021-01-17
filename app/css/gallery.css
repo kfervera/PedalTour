@@ -27,7 +27,7 @@ section .box .imgBx img{
 .main .gallery{
     position: relative;
     height: auto;
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 45px 0;
     display: grid;
