@@ -9,8 +9,9 @@
     <link rel="icon" type="image/png" href="src/icons/icon-01.png" />
 
     <meta name="description"
-        content="Cajamarca Tours, tours y actividades en la ciudad de Cajamarca, que demuestran el atractivo turístico de esta región">
-
+        content="Somos un operador turístico impulsado por el financiamiento del Programa Turismo Emprende del Ministerio de Comercio Exterior y Turismo y al cofinanciamiento de las beneficiarias.">
+    <meta property="og:image" content="http://pedaltourcajamarca.com/src/images/pedal-tour-11-2020-0497.jpg">
+    <meta property="og:image:secure_url" content="http://pedaltourcajamarca.com/src/images/pedal-tour-11-2020-0497.jpg">
     <!-- librerias CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-resource.js"></script>
@@ -19,6 +20,9 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <!-- estilos -->
     <link rel="stylesheet" href="app/css/style.css">
     <link rel="stylesheet" href="app/css/jquery.datetimepicker.min.css">
@@ -28,67 +32,115 @@
 </head>
 
 <body>
-
-    <header id="pedalHeader">
-        <a class="menu-item" href="#!/"><img class="logo" src="src/icons/logo-03.png"></a>
-
-        <div class="toggle">
-            <div class="t-open">
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="src/icons/logonb-03.png" height="50" class="logo d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
-            </div>
-            <div class="t-close">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <ul class="menu">
-            <li class="lang-es"><a class="menu-item" href="#!/nosotros">NOSOTROS</a></li>
-            <li class="lang-es"><a class="menu-item" href="#!/galeria">GALERÍA</a></li>
-            <li class="lang-es"><a class="menu-item" href="#!/reservas">RESERVAS</a></li>
-            <li class="lang-es"><a class="menu-item" href="#!/contacto">CONTÁCTANOS</a></li>
-            <li class="lang-es"><a class="menu-item" href="#!/ayuda">AYUDA</a></li>
-            <li class="lang-es"><hr></li>
-            <li class="lang-es">
-                <img id="btn-en" src="src/icons/flag-eu.png" alt="" style="height: 25px;">
-            </li>
+            </button>
             
-            <li class="lang-en"><a class="menu-item" href="#!/nosotros">ABOUT US</a></li>
-            <li class="lang-en"><a class="menu-item" href="#!/galeria">GALLERY</a></li>
-            <li class="lang-en"><a class="menu-item" href="#!/reservas">RESERVATIONS</a></li>
-            <li class="lang-en"><a class="menu-item" href="#!/contacto">CONTACT</a></li>
-            <li class="lang-en"><a class="menu-item" href="#!/ayuda">HELP</a></li>
-            <li class="lang-en"><hr></li>
-            <li class="lang-en">
-                <img id="btn-es" src="src/icons/flag-pe.png" alt="" style="height: 25px;">
-            </li>
-        </ul>
-
-    </header>
-
-    <div ng-view class="view-div"></div>
-
-    <footer id="pedalFooter">
-        <div class="media-items">
-            <ul class="social-media">
-                <li><a
-                        href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=pedaltourcajamarca@gmail.com&su=[PedalInfo] Consulta a pedal Tour&body=Estimados pedales:"><i
-                            class="fas fa-envelope"></i></a></li>
-                <li><a href="https://www.facebook.com/Pedal-Tour-100713094680526"><i
-                            class="fab fa-facebook-square"></i></a></li>
-                <li><a href="https://www.instagram.com/pedaltourcajamarca/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://twitter.com/pedaltourcajamarca"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=dblklpAz1Is"><i class="fab fa-youtube"></i></a></li>
-                <!-- <li><a href="/tiktok"><i class="fab fa-tiktok"></i></a></li> -->
-            </ul>
+            <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo01">
+                <div class="row nav-items-container">
+                    <ul class="navbar-nav nav justify-content-end me-auto mb-2 mb-lg-0">
+                        <li class="nav-item lang-es"><a class="nav-link menu-item" href="#!/nosotros">NOSOTROS</a></li>
+                        <li class="nav-item lang-es"><a class="nav-link menu-item" href="#!/conoce">CAJAMARCA</a></li>
+                        <li class="nav-item lang-es"><a class="nav-link menu-item" href="#!/galeria">GALERÍA</a></li>
+                        <li class="nav-item lang-es"><a class="nav-link menu-item" href="#!/reservas">RESERVAS</a></li>
+                        <li class="nav-item lang-es"><a class="nav-link menu-item" href="#!/contacto">CONTÁCTANOS</a></li>
+                        <li class="nav-item lang-es"><a class="nav-link menu-item" href="#!/ayuda">AYUDA</a></li>
+                        <li class="lang-es">
+                            <hr>
+                        </li>
+                        <li class="nav-item lang-es">
+                            <img id="btn-en" src="src/icons/flag-eu.png" style="height: 25px;">
+                        </li>
+        
+                        <li class="nav-item lang-en"><a class="nav-link menu-item" href="#!/nosotros">ABOUT US</a></li>
+                        <li class="nav-item lang-en"><a class="nav-link menu-item" href="#!/conoce">CAJAMARCA</a></li>
+                        <li class="nav-item lang-en"><a class="nav-link menu-item" href="#!/galeria">GALLERY</a></li>
+                        <li class="nav-item lang-en"><a class="nav-link menu-item" href="#!/reservas">RESERVATIONS</a></li>
+                        <li class="nav-item lang-en"><a class="nav-link menu-item" href="#!/contacto">CONTACT</a></li>
+                        <li class="nav-item lang-en"><a class="nav-link menu-item" href="#!/ayuda">HELP</a></li>
+                        <li class="lang-en">
+                            <hr>
+                        </li>
+                        <li class="nav-item lang-en">
+                            <img id="btn-es" src="src/icons/flag-pe.png" alt="" style="height: 25px;">
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
         </div>
-        <div class="">
-            <p><i class="fas fa-map-marker-alt"></i> Jr. Horacio Urteaga #372 - 2A - Cajamarca - Perú</p>
-            <p><i class="fas fa-phone"></i></i> 976 730 488 - 979 739 765</p>
-            <p><i class="fas fa-envelope"></i> pedaltourcajamarca@gmail.com</p>
+    </nav>
+
+    <div ng-view class="view-div content-body"></div>
+
+    <footer class="pb-0 pt-5 f-body">
+        <div class="container pb-4">
+            <div class="row text-start">
+                <div class="col-sm-12 col-md-6">
+                    <h4>Acerca de</h4>
+                    <div>
+                        <p>Somos un operador turístico impulsado por el financiamiento del Programa Turismo Emprende del Ministerio de Comercio Exterior y Turismo y al cofinanciamiento de las beneficiarias.</p>
+                    </div>
+                    <div class="row social-media">
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=pedaltourcajamarca@gmail.com&su=[PedalInfo] Consulta a pedal Tour&body=Estimados pedales:"><i
+                                            class="fas fa-envelope"></i></a>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.facebook.com/Pedal-Tour-100713094680526"><i
+                                            class="fab fa-facebook-square"></i></a>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.instagram.com/pedaltourcajamarca/"><i
+                                            class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="col">
+                                    <a href="https://twitter.com/pedaltourcajamarca"><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.youtube.com/watch?v=dblklpAz1Is"><i class="fab fa-youtube"></i></a>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.tiktok.com/@pedaltourcajamarca?lang=es"><i class="fab fa-tiktok"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-1">
+                    <div class="f-bar d-md-none">
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-5">
+                    <h4>Contáctanos</h4>
+                    <div>
+                        <div class="my-2">
+                            <span><i class="fas fa-map-marker-alt"></i> Jr. Horacio Urteaga #372 - 2A - Cajamarca -
+                                Perú</span>
+                        </div>
+                        <div class="my-2">
+                            <span><i class="fas fa-phone"></i></i> 976 730 488 - 979 739 765</span>
+                        </div>
+                        <div class="my-2">
+                            <span><i class="fas fa-envelope"></i> pedaltourcajamarca@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span>
-            Pedal TOUR Copyright ©2020 All rights reserved | made by Kevin Fernández
-        </span>
+        <div class="row py-1 mx-0 text-center f-end">
+            <small>Pedal TOUR Copyright ©2020 All rights reserved | made by Kevin Fernández</small>
+        </div>
     </footer>
 
     <!-- scripts AngularJs -->

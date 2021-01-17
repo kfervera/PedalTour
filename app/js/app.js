@@ -1,11 +1,11 @@
 $(function () {
     window.addEventListener('scroll', function () {
         if (window.scrollY > 0) {
-            $('header').addClass('sticky');
-            $(".logo").attr("src", "src/icons/logo-04.png");
+            $('nav').addClass('sticky');
+            $(".logo").attr("src", "src/icons/logonb-04.png");
         } else {
-            $('header').removeClass('sticky');
-            $(".logo").attr("src", "src/icons/logo-03.png");
+            $('nav').removeClass('sticky');
+            $(".logo").attr("src", "src/icons/logonb-03.png");
         }
     });
 
