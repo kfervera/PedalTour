@@ -8,6 +8,10 @@ $(function () {
             $(".logo").attr("src", "src/icons/logonb-03.png");
         }
     });
+    
+    $("body").find(".menu-item").on("click", function () {
+        $("#navbarTogglerDemo01").removeClass("show");
+    });
 
     $('body').find("#btn-en").on("click", function () {
         $(".lang-en").show();
