@@ -20,6 +20,7 @@ $(function () {
             this.href = this.href + "#en";
         });
         location.href = location.href + "#en";
+        $("#navbarTogglerDemo01").removeClass("show");
     });
 
     $('body').find("#btn-es").on("click", function () {
