@@ -44,8 +44,6 @@ ul{
 }
 
 .answer{
-    /* max-height: 0;
-    overflow: hidden; */
     position: relative;
     background-color: #212838;
 }
@@ -120,3 +118,34 @@ ul{
     transition: 0.5s ease-in-out;
     background: #ff0057;
 }
+
+.img-norma{
+    width: 100%;
+}
+
+/* RESPONSIVE */
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+ }
+
+ /* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+ }
+
+ /* // Medium devices (tablets, less than 992px) */
+ @media (max-width: 991.98px) {
+    .faq-container{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    
+}
+
+ /* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+ }
