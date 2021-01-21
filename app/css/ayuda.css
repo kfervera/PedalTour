@@ -16,6 +16,19 @@ ul{
     color: white
 }
 
+.card-header{
+    background-color: #121421;
+    padding: 0.25rem 1.25rem;
+}
+
+.card-header .btn-link{
+    color: white;   
+}
+
+.card-header .btn-link:focus{
+    box-shadow: 0 0 0 0;  
+}
+
 .accordion-item{
     background-color: #121421;
     border-radius: .5rem;
