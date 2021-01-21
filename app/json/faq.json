@@ -1,12 +1,23 @@
 {
     "faqs": [
         {
-            "qst": "¿Como hago para comunucarme con ustedes?",
-            "ans": ""
+            "id": "2",
+            "qst_es": "¿QUÉ DEBO LLEVAR PARA MI PASEO?",
+            "ans_es": "<P>Tenga en cuenta de que no hay espacio de almacenamiento en nuestros vagones.                        </P>                        <ul>                            <li>Cada turista debe portar siempre su identificación.</li>                            <li>Llevar su declaración de renuncia de responsabilidad firmada</li>                            <li>Ropa y zapatos cómodos para pedalear</li>                            <li>Puede llevar sus propios alimentos y bebidas sin alcohol.</li>                            <li>Puede llevar efectivo en caso de que algunos establecimientos donde desee adquirir algo                                no                                cuente con POS.</li>                            <li>Puede llevar su propia música y listas de reproducción para que el conductor y/o guía                                designado la controle. Pero no es exclusivamente necesario ya que el vagón llevara su                                propia                                lista de reproducción.</li>                            <li>Se permite llevar decoraciones sólo para reservas privadas y estas no deben ser                                ofensivas.                                También proporcionamos la decoración del vagón en caso desees celebrar una fecha                                especial.                            </li>                        </ul>                        <p>                            * Está totalmente prohibido portar armas u objetos punzo cortantes.                        </p>",
+            "qst_en": "",
+            "ans_en": ""
         },
+
         {
-            "qst": "",
-            "ans": "¿?"
+            "qst_es": "3",
+            "ans_es": "",
+            "qst_en": "",
+            "ans_en": ""
+        },{
+            "qst_es": "",
+            "ans_es": "",
+            "qst_en": "",
+            "ans_en": ""
         }
     ]
 }

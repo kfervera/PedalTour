@@ -14,22 +14,23 @@ section
     padding-top: 2.5rem;
 }
 
-.content-body{
-    margin-top: 75px;
+video{
+    max-width: 100%;
 }
+
 h1{
-    color: red;
+    color: #e72a2a;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
 h2{
-    color: red;
+    color: #e72a2a;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 h3, h4, h5{
-    color: red;
+    color: #e72a2a;
 }
 
 img{
@@ -41,6 +42,7 @@ nav{
     background: #fff !important;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
+
 nav.sticky{
     background: #121421 !important;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -53,15 +55,12 @@ nav .navbar-nav{
     margin-right: 0px !important;
     padding-right: 0px !important;
 }
-nav .nav-items-container{
-    margin-left: 25rem;
-}
 nav li a, nav svg{
     margin-left: 10px;
     color: #121421;
 }
 nav li a:hover{
-    color: red !important;
+    color: #e72a2a !important;
 }
 .navbar-toggler:focus{
     box-shadow: 0 0 0 0;
@@ -69,7 +68,7 @@ nav li a:hover{
 
 /* FOOTER */
 .f-body {
-    background: #01030f;
+    background: #212529;
 }
 
 .f-end {
@@ -86,9 +85,6 @@ footer .social-media svg{
 /* RESPONSIVE */
 /* // X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
-    nav .nav-items-container{
-        margin-left: 15rem;
-    }
     section
     {
         padding-left: 130px;
@@ -98,9 +94,6 @@ footer .social-media svg{
 
  /* // Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
-    nav .nav-items-container{
-        margin-left: 2rem;
-    }
     footer .social-media svg{
         font-size: 1.25rem !important;
     }
@@ -112,13 +105,13 @@ footer .social-media svg{
  }
 
  /* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-    nav .nav-items-container{
-        margin-left: 0;
-    }
+@media (max-width: 991.98px) {
     nav .navbar-nav li{
         margin-top: 20px;
-        margin-bottom: 20px;
+        /* margin-bottom: 15px; */
+    }
+    .navbar-collapse{
+        height: 100vh;
     }
     footer .social-media svg{
         font-size: 1rem !important;

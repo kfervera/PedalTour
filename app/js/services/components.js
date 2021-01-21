@@ -151,6 +151,10 @@ angular.module('pedalApp')
                 $(".lang-en").show();
                 $(".lang-es").hide();
             }
+
+            $http.get('app/json/faq.json').then(function (response) {
+                $scope.faqs = response.data.faqs;
+            });
             
             $http.get('app/json/normas.json').then(function (response) {
                 $scope.normas = response.data.normas;
