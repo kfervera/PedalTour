@@ -27,6 +27,9 @@ angular.
                 .when('/ayuda', {
                     template: '<ayuda></ayuda>'
                 })
+                .when('/admin', {
+                    template: '<admin></admin>'
+                })
                 .when('/error', {
                     template: '<error></error>'
                 })

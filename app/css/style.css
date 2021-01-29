@@ -82,6 +82,44 @@ footer .social-media svg{
     font-size: 2rem !important;
 }
 
+
+/* TOAST */
+.toast {
+    position: fixed;
+    top: 120px;
+    right: 50px;
+    margin: auto;
+    max-width: 400px;
+    padding: 1rem;
+    background: #cccccc;
+    color: #333333;
+    font-family: sans-serif;
+    text-align: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 999;
+    transition: opacity 0.2s, top 0.4s, visibility 0.2s;
+  }
+  
+  .toast--visible {
+    top: 100px !important;
+    opacity: 0.90 !important;
+  }
+  
+  .toast--success {
+    background: #125A12;
+    border-color: #009d23;
+    color: #ffffff;
+  }
+  
+  .toast--error {
+    background: #d50000;
+    border-color: #ba0000;
+    color: #ffffff;
+  }  
+
 /* RESPONSIVE */
 /* // X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {

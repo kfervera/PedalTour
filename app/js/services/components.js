@@ -2,7 +2,7 @@ angular.module('pedalApp')
     .component('inicio', {
         templateUrl: 'views/Inicio.html',
         controller: function ($scope) {
-            
+
             if (!window.location.hash || !window.location.hash.includes("#en")) {
                 $(".lang-es").show();
                 $(".lang-en").hide();
@@ -83,62 +83,85 @@ angular.module('pedalApp')
     .component('reservas', {
         templateUrl: 'views/Reservas.html',
         controller: function ($scope) {
-            $scope.model = {};
+            $(function () {
+                $scope.model = {};
 
-            if (!window.location.hash || !window.location.hash.includes("#en")) {
-                $(".lang-es").show();
-                $(".lang-en").hide();
-            } else {
-                $(".lang-en").show();
-                $(".lang-es").hide();
-            }
+                if (!window.location.hash || !window.location.hash.includes("#en")) {
+                    $(".lang-es").show();
+                    $(".lang-en").hide();
+                } else {
+                    $(".lang-en").show();
+                    $(".lang-es").hide();
+                }
 
-            jQuery.datetimepicker.setLocale('es');
-            $('.date').datetimepicker({
-                timepicker: false,
-                format: 'd/m/Y',
-                onChangeDateTime: function (dp, $input) {
-                    $scope.model.date = $input.val();
+                const Toast = {
+                    init() {
+                        this.hideTimeout = null;
+
+                        this.el = document.createElement("div");
+                        this.el.className = "toast";
+                        document.body.appendChild(this.el);
+                    },
+
+                    show(message, state) {
+                        clearTimeout(this.hideTimeout);
+                        this.el.textContent = message;
+                        this.el.className = "toast toast--visible";
+
+                        if (state) {
+                            this.el.classList.add(`toast--${state}`);
+                        }
+
+                        this.hideTimeout = setTimeout(() => {
+                            this.el.classList.remove("toast--visible");
+                        }, 7000);
+                    }
+                };
+
+                Toast.init();
+
+                jQuery.datetimepicker.setLocale('es');
+                $('.date').datetimepicker({
+                    timepicker: false,
+                    format: 'd/m/Y',
+                    onChangeDateTime: function (dp, $input) {
+                        $scope.model.date = $input.val();
+                    }
+                });
+                $('.time').datetimepicker({
+                    datepicker: false,
+                    allowTimes: [
+                        '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00',
+                        '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'
+                    ],
+                    format: 'H:i',
+                    onChangeDateTime: function (dp, $input) {
+                        $scope.model.time = $input.val();
+                    }
+                });
+                let reservasDB = firebase.database().ref("reservas");
+                $scope.SendMail = function () {
+                    if (!$scope.model.name || !$scope.model.date || !$scope.model.time || !$scope.model.mail || !$scope.model.phone) {
+                        Toast.show("Todos los campos son obligatorios", "error");
+                        return;
+                    }
+
+                    let tzoffset = (new Date()).getTimezoneOffset() * 60000;
+                    let localISOTime = (new Date(Date.now() + tzoffset)).toJSON();
+                    let newReservation = reservasDB.push();
+                    newReservation.set({
+                        nombres: $scope.model.name,
+                        fecha: $scope.model.date,
+                        hora: $scope.model.time,
+                        correo: $scope.model.mail,
+                        celular: $scope.model.phone,
+                        date: localISOTime,
+                        hasScheduled: false
+                    });
+                    $scope.model = {};
+                    Toast.show("Gracias por confiar en pedal Tour, para una mejor experiencia nos pondremos en contacto contigo.", "success");
                 }
             });
-            $('.time').datetimepicker({
-                datepicker: false,
-                allowTimes: [
-                    '06:00', '07:00', '08:00','09:00', '10:00', '11:00','12:00', '13:00',
-                    '15:00', '16:00', '17:00','18:00', '19:00', '20:00','21:00'
-                ],
-                format: 'H:i',
-                onChangeDateTime: function (dp, $input) {
-                    $scope.model.time = $input.val();
-                }
-            });
-            var setVar = function (nombre, valor) {
-                let result = '<strong>';
-                result += nombre;
-                result += ': </strong><em>';
-                result += valor;
-                result += '</em><br></br>';
-                return result;
-            };
-            $scope.SendMail = function () {
-                let result = '<html>'
-                result += setVar('Nombres', $scope.model.name)
-                result += setVar('Fecha', $scope.model.date)
-                result += setVar('Hora', $scope.model.time)
-                result += setVar('Correo', $scope.model.mail)
-                result += setVar('Celular', $scope.model.phone)
-                result += '</html>'
-
-                Email.send({
-                    SecureToken: "0f2bf924-f60e-4ca3-9f6d-81360306e449",
-                    To: 'pedaltourcajamarca@gmail.com',
-                    From: "info@pedaltour.com",
-                    Subject: "[Pedal TOUR] Reservación",
-                    Body: result
-                }).then(
-                    message => alert("Gracias por confiar en pedalTOUR, para una mejor experiencia nos pondremos en contacto contigo.")
-                );
-            }
         }
     })
     .component('ayuda', {
@@ -155,7 +178,7 @@ angular.module('pedalApp')
             $http.get('app/json/faq.json').then(function (response) {
                 $scope.faqs = response.data.faqs;
             });
-            
+
             $http.get('app/json/normas.json').then(function (response) {
                 $scope.normas = response.data.normas;
             });
@@ -185,5 +208,64 @@ angular.module('pedalApp')
                 }
             }
             stars();
+        }
+    })
+    .component('admin', {
+        templateUrl: 'views/Admin.html',
+        controller: function ($scope) {
+            $(function () {
+                $(".lang-es").show();
+                $(".lang-en").hide();
+                $(".eeuu").hide();
+                $scope.loading = true;
+                $scope.reservas = [];
+
+                function SortByName(a, b) {
+                    var aName = a.date;
+                    var bName = b.date;
+                    return ((aName > bName) ? -1 : ((aName < bName) ? 1 : 0));
+                }
+
+                $scope.Programar = function (reserva) {
+                    reserva.hasScheduled = true;
+                    console.log(reserva.id);
+
+                    firebase.database().ref('reservas/' + reserva.id).set({
+                        nombres: reserva.nombres,
+                        fecha: reserva.fecha,
+                        hora: reserva.hora,
+                        correo: reserva.correo,
+                        celular: reserva.celular,
+                        date: reserva.date,
+                        hasScheduled: reserva.hasScheduled
+                    });
+                    console.log("Terminado");
+                }
+
+                //retrieve data
+                let reservasDB = firebase.database().ref("reservas");
+                reservasDB.on("value", function (data) {
+                    let info = data.val();
+                    let keys = Object.keys(info);
+                    $scope.reservas = [];
+                    for (let i = 0; i < keys.length; i++) {
+                        let j = keys[i];
+
+                        let item = {
+                            id: j,
+                            nombres: info[j].nombres,
+                            fecha: info[j].fecha,
+                            hora: info[j].hora,
+                            correo: info[j].correo,
+                            celular: info[j].celular,
+                            date: info[j].date,
+                            hasScheduled: info[j].hasScheduled
+                        }
+                        $scope.reservas.push(item);
+                    }
+                    $scope.reservas.sort(SortByName);
+                    $scope.$digest()
+                })
+            });
         }
     })
