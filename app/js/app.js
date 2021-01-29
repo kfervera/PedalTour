@@ -4,13 +4,16 @@ $(function () {
     var firebaseConfig = {
         apiKey: "AIzaSyAC3MKu5aI1fK3KrST9bKlQDX2jcr6McFc",
         authDomain: "pedaltour-e6851.firebaseapp.com",
+        databaseURL: "https://pedaltour-e6851-default-rtdb.firebaseio.com",
         projectId: "pedaltour-e6851",
         storageBucket: "pedaltour-e6851.appspot.com",
         messagingSenderId: "734969047795",
-        appId: "1:734969047795:web:9272f241b5ba925958e586"
+        appId: "1:734969047795:web:9272f241b5ba925958e586",
+        measurementId: "G-5F0CCSWC1T"
       };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
     // aplicacion
     window.addEventListener('scroll', function () {
