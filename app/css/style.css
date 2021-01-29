@@ -87,7 +87,7 @@ footer .social-media svg{
 .toast {
     position: fixed;
     top: 120px;
-    right: 50px;
+    right: 25px;
     margin: auto;
     max-width: 400px;
     padding: 1rem;
