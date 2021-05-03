@@ -4,49 +4,49 @@
             "number":"1",
             "title":"Pedalea",
             "title_en":"Pedal",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/1.png",
             "Text":"El vagón a pedales no tiene ningún motor. Si te subes a un asiento con pedalesy y no los usas, perjudicarás al grupo entero. Si la mayor parte de la gente no pedalea. el vehiculo no se moverá. Atento a las instrucciones del conductor sobre la intensidad de pedaleo.",
             "Text_en":"The pedal car has no motor. If you get on a seat with pedals and do not use them, you will harm the whole group. If most people don't pedal. the vehicle will not move. Attentive to the driver's instructions on pedaling intensity."
         },{
             "number":"2",
             "title":"No te levantes del asiento mientras el vehiculo está en marcha",
             "title_en":"Do not get up from the seat while the vehicle is running",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/2.png",
             "Text":"Si quieres experimentar en otro asiento, avisa al guía. Aunque el vehiculo circule muy lentamente, debes ayudarnos a mantener el orden de los pasajeros.",
             "Text_en":"If you want to experiment in another seat, let the guide know. Although the vehicle circulates very slowly, you must help us to maintain the order of the passengers."
         },{
             "number":"3",
             "title":"Sé respetuoso con los usuarios de la vía y los empleados",
             "title_en":"Be respectful to road users and employees",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/3.png",
             "Text":"Pedal Tour es una actividad de ocio que da prioridad a los peatones, ciclistas o vehículos. No grites, no hagas gestos obcenos ni uses vocavulario soez para dirigirte a ellos. El conductor y el guía son empleados a tu servicio, sé educado y respeta su trabajo.",
             "Text_en":"Pedal Tour is a leisure activity that gives priority to pedestrians, cyclists or vehicles. Don't yell, make stubborn gestures, or use foul vocabulary to address them. The driver and guide are employees at your service, be polite and respect their work."
         },{
             "number":"4",
             "title":"No tires nada al suelo",
             "title_en":"Don't throw anything on the ground",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/4.png",
             "Text":"Pedal Tour tiene disponible papeeras a bordo. Si quieres, solicita ayuda al guía. Nuestro vehiculo está equipado con papeleras. Comparte nuestra preocupación por ser una actividad respetuosa con el medio ambiente.",
             "Text_en":"Pedal Tour has mumps available on board. If you want, ask the guide for help. Our vehicle is equipped with bins. Share our concern for being a respectful activity with the environment."
         },{
             "number":"5",
             "title":"No hables con el conductor",
             "title_en":"Don't talk to the driver",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/5.png",
             "Text":"El conductor dirige el vehículo gracias al movimiento de los pedales, bajo ningún concepto debe molestar al conductor durante la marcha, y así evitar accidentes de tránsito.",
             "Text_en":"The driver steers the vehicle thanks to the movement of the pedals, under no circumstances should it bother the driver while driving, and thus avoid traffic accidents."
         },{
             "number":"6",
             "title":"Usa cinturón de seguridad",
             "title_en":"Wear a seat belt",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/6.png",
             "Text":"Colócate el cinturón de seguridad en cuanto te lo indique tu guía y no te la desabroches hasta llegar a tu destino, si deseas algún ajuste, no dudes en pedir ayuda.",
             "Text_en":"Put on your seat belt as soon as your guide tells you and do not unbuckle it until you reach your destination, if you want any adjustment, do not hesitate to ask for help."
         },{
             "number":"7",
             "title":"Prohibido subir en estado etílico",
             "title_en":"It is forbidden to climb in an alcoholic state",
-            "img":"../src/images/normas/icono1.png",
+            "img":"../src/images/normas/7.png",
             "Text":"Si ingeriste bebidas alcohólicas antes de subir al vagón, tendremos que invitarte a retirarte sin reclamo a devolución. Recuerda que lo hacemos por tu seguridad.",
             "Text_en":"If you drank alcoholic beverages before getting on the wagon, we will have to invite you to leave without claiming a refund. Remember that we do it for your safety."
         }
